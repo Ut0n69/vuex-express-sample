@@ -1,0 +1,35 @@
+// slide-quad
+$slide-quad-Back: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+$slide-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+.slideQuad-enter-active {
+  transition: all .5s $slide-quad;
+}
+
+.slideQuad-leave-active {
+  transition: all .5s $slide-quad-Back;
+}
+
+.slideQuad-enter,
+.slideQuad-leave-to {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+// slide-in-out
+$slide: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$slide-Back: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+
+.slideIn-enter-active {
+  transition: all .5s $slide;
+}
+
+.slideIn-leave-active {
+  transition: all .5s $slide-Back;
+}
+
+.slideIn-enter,
+.slideIn-leave-to {
+  transform: translateY(20px);
+  opacity: 0;
+}
