@@ -8,12 +8,15 @@
 
 <script>
 import ListController from './ListController';
+import { mapState } from 'vuex';
 
 export default {
   computed: {
-    list() {
-      return this.$store.state.items.data.list;
-    }
+    ...mapState({
+      list(state) {
+        return state.items.data.list;
+      }
+    })
   },
   mounted() {
     new ListController().getItem();
